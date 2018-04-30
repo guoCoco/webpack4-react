@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "entry": "node config/entry/entryBuild.js",
+    "devNew": "npm run entry && npm run devBuildHtml",
+    "devBuildHtml": "node config/webpack/webpack.devBuildHtml.conf.js",
     "dev": "webpack-dev-server --devtool eval --hot-only --progress --colors --profile --config config/webpack/webpack.dev.conf.js"
   },
   "keywords": [],
